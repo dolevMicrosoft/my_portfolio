@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --secondary-color: cadetblue;
+    --active-color : #ffc300;
+}
+body{
+    height: 1000px;
+}
+header{
+    background-color: white;
+    position: sticky;
+    top: 0; 
+    z-index: 100;
+    
+}
+.active{
+    color: var(--active-color);
+}
+nav a{
+    position: relative;
+    size: 100%;
+    font-size: 2em;
+    text-decoration: none;
+    color:cadetblue;
+    transition: box-shadow 0.3s;
+    transition: color 0.3s;
+}
+a:not(.active):hover {
+    color: #666;
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    bottom: -0.5px;
+    width: 100%;
+    height: 2px;
+    transform: scaleX();
+    transition: transform 0.3s;
+    /* Apply shadow effect on hover */
+
+}
+
+nav a:hover::before{
+    transform: scaleX(1);
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    width:fit-content;
+    display: inline;
+
+}
+
+ul{
+    left:20%;
+    width: auto;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    
+}
+
+li{
+    margin: 20px;
+    list-style-type: none;
+
+}
+
+
+
+
+
+/* Home section design */
+img .portrait{
+    background-color: #ffc300;
+    width: 30%;
+    height: auto;
+}
