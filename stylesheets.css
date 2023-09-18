@@ -7,14 +7,13 @@
     --active-color : #ffc300;
 }
 body{
-    height: 1000px;
 }
 header{
     background-color: white;
+    border-bottom:#666 solid 2px;
     position: sticky;
     top: 0; 
     z-index: 100;
-    
 }
 .active{
     color: var(--active-color);
@@ -32,29 +31,9 @@ a:not(.active):hover {
     color: #666;
 }
 
-a::before{
-    content: '';
-    position: absolute;
-    bottom: -0.5px;
-    width: 100%;
-    height: 2px;
-    transform: scaleX();
-    transition: transform 0.3s;
-    /* Apply shadow effect on hover */
-
-}
-
-nav a:hover::before{
-    transform: scaleX(1);
-}
-
 nav{
     display: flex;
     justify-content: center;
-}
-h1{
-    width:fit-content;
-    display: inline;
 
 }
 
@@ -75,11 +54,56 @@ li{
 
 
 
+div.info-container{
+    width: fit-content;
+}
+.home-container{
+
+    justify-content: center;
+    display: flex;
+    justify-content:space-around;
+
+}
+
+
 
 
 /* Home section design */
-img .portrait{
-    background-color: #ffc300;
-    width: 30%;
+.Home{
+    height: 500px;
+    padding-top: 10%;
+}
+
+.portrait{
     height: auto;
 }
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+}
+.info-container span{
+    color: var(--active-color);
+    font-size: 1.2em;
+}
+.info-container p{
+    margin-bottom: 30px;
+}
+.info-container a{
+    color: black;
+    text-decoration: none;
+    border:#666 solid 1.5px;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: var(--active-color);
+}
+
+
+/* About me section design */
+.About-me{
+    height: 500px;
+    padding-top: 10%;
+}
+
